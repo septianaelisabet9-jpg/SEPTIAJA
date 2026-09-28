@@ -7,16 +7,19 @@
 </head>
 <body>
     <h2>LOGIN</h2>
-    <form method="POST" action="login">
+    <form method="POST" action="/login">
         @csrf
         <label for="name">username:</label>
         <input type="text" name="u" required><br>
 
         <label for="password">Password:</label>
-        <input type="password" name="zano"  required><br>
+        <input type="password" name="p"  required><br>
 
 
         <button type="submit">Login</button>
+        <button>
+            <a href="/inputdata">REGISTER</a>
+        </button>
     </form>
 </body>
 </html>

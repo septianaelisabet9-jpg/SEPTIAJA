@@ -1,11 +1,13 @@
 <?php
-use App\Http\Controllers\registercontroller;
-use App\Http\Controllers\logincontroller;
 
 use Illuminate\Support\Facades\Route;
+use App\Controllers\logincontroller;
 
-Route::get('/', 'App\Http\Controllers\Perpustakaan@index');
-Route::post('/login', 'App\Http\Controllers\Perpustakaan@login');
-Route::get('/dashboard', 'App\Http\Controllers\Perpustakaan@dashboard');
-Route::get('/dashboard', 'App\Http\Controllers\Perpustakaan@dashboard');
-Route::get('/logout', 'App\Http\Controllers\Perpustakaan@logout');
+Route::get('/','App\Http\Controllers\LoginController@index');
+Route::post('/login','App\Http\Controllers\LoginController@aksilogin');
+
+Route::get('/home','App\Http\Controllers\LoginController@home');
+Route::get('/logout','App\Http\Controllers\LoginController@logout');
+
+Route::get('/inputdata','App\Http\Controllers\logincontroller@data');
+Route::post('/input','App\Http\Controllers\logincontroller@form');
